@@ -45,5 +45,37 @@ namespace CodingEvents.Controllers
             return View("Add", tag);
         }
 
+        public IActionResult AddEvent(int id)               //many to many
+        {
+            Event theEvent = context.Events.Find(id);
+            List<Tag> possibleTags = context.Tags.ToList();
+
+            AddEventTagViewModel viewModel = new AddEventTagViewModel(theEvent, possibleTags);
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult AddEvent(AddEventTagViewModel viewModel)              // many to many
+        {
+            if (ModelState.IsValid)                     // for post requests, to validate should have a tag id and event id
+            {
+                int eventId = viewModel.EventId;
+                int tagId = viewModel.TagId;
+
+                EventTag eventTag = new EventTag
+                {
+                    EventId = eventId,
+                    TagId = tagId
+                };
+
+                context.EventTags.Add(eventTag);
+                context.SaveChanges();
+
+                return Redirect("/Events/Detail/" + eventId);
+            }
+
+            return View(viewModel);
+        }
     }
 }
