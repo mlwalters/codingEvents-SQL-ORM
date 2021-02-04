@@ -149,3 +149,6 @@ C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCod
 C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCodingEventsWithmySQLpassword\CodingEvents\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCodingEventsWithmySQLpassword\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\EventCategory\Index.cshtml.g.cs
 C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCodingEventsWithmySQLpassword\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\EventCategory\Create.cshtml.g.cs
+C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCodingEventsWithmySQLpassword\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Tag\Add.cshtml.g.cs
+C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCodingEventsWithmySQLpassword\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Tag\Index.cshtml.g.cs
+C:\Users\racir\source\repos\LaunchCode\csharpClass15sqlORM\practice-copyOfMVCCodingEventsWithmySQLpassword\CodingEvents\obj\Debug\netcoreapp3.1\Razor\Views\Events\Detail.cshtml.g.cs

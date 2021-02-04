@@ -67,6 +67,16 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
             return View(addEventViewModel);
         }
 
+        public IActionResult Detail(int id)
+        {
+            Event theEvent = context.Events
+               .Include(e => e.Category)
+               .Single(e => e.Id == id);
+
+            EventDetailViewModel viewModel = new EventDetailViewModel(theEvent);
+            return View(viewModel);
+        }
+
         public IActionResult Delete()
         {
             // ViewBag.events = EventData.GetAll();
