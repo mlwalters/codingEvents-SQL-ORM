@@ -1,0 +1,51 @@
+﻿
+@using CodingEvents.Models
+
+@model List<Event>
+
+<h1>Coding Events</h1>
+
+<p>
+    <a asp-controller="Events" asp-action="Add">Add Event</a> @*to be redirected to events add page*@
+</p>
+<p>
+    <a asp-controller="Events" asp-action="Delete">Delete Event</a> @*to be redirected to events page*@
+</p>
+
+
+@if (Model.Count == 0)
+{
+    <h3>No events yet!</h3>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>No. of Attendees</th>
+            <th>Category</th>
+            <th>Contact Email</th>
+            <th></th>
+        </tr>
+
+        @foreach (var evt in Model)
+        {
+            <tr>
+                <td>@evt.Id</td>
+                <td>@evt.Name</td>
+                <td>@evt.Location</td>
+                <td>@evt.Description</td>
+                <td>@evt.NoOfAttendees</td>
+                <td>@evt.Category.Name</td>
+                <td>@evt.ContactEmail</td>
+                <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.Id">Edit Event</a></td>
+            </tr>
+        }
+    </table>
+}
+
+
+

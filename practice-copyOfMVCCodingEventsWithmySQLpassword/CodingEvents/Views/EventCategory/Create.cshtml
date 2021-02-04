@@ -1,0 +1,33 @@
+﻿@*EventCategory Create*@
+
+@using CodingEvents.ViewModels;
+
+@model AddEventCategoryViewModel
+
+<h1>Add Event Category</h1>
+
+<form method="post" asp-controller="EventCategory" asp-action="ProcessCreateEventCategoryForm">
+    <div class="form-group">
+        <label asp-for="Name">
+            @*using uppercase referring to the property*@
+            Name of event:
+            <span asp-validation-for="Name" class="text-warning font-italic"></span>
+            <br />
+            <input asp-for="Name" />
+        </label>
+    </div>
+
+    <input type="submit" value="Add Category" class="btn btn-secondary" />
+</form>
+
+<p>
+    <a class="btn btn-secondary" asp-area="" asp-controller="Events" asp-action="Add">Add an event</a>
+</p>
+<p>
+    <a class="btn btn-secondary" asp-area="" asp-controller="EventCategory" asp-action="Index">Categories</a>
+</p>
+
+
+
+
+
