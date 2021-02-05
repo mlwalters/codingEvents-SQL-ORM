@@ -22,7 +22,7 @@ namespace CodingEvents.Data
         // place to put configuration code about the models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<EventTag>().HasKey(et => new {et.EventId, et.TagId }); // pair fo event id and tag id
+            modelBuilder.Entity<EventTag>().HasKey(et => new {et.EventId, et.TagId }); // pair for event id and tag id
         }
     }
 }
