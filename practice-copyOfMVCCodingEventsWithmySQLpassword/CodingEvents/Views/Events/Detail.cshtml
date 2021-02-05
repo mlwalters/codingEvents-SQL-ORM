@@ -15,7 +15,13 @@
         <th>Category</th>
         <td>@Model.CategoryName</td>
     </tr>
+    <tr>
+        <th>Tags</th>
+        <td>@Model.TagText</td>
+    </tr>
 
 </table>
 
-//TODO add more details next
+<a class="" asp-area="" asp-controller="Tag" asp-action="AddEvent" asp-route-id="@Model.EventId">Add tag</a> @*Checkout asp-route-id*@
+
+@*TODO add more details next*@

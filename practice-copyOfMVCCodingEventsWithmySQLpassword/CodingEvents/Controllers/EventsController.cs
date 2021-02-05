@@ -73,7 +73,12 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
                .Include(e => e.Category)
                .Single(e => e.Id == id);
 
-            EventDetailViewModel viewModel = new EventDetailViewModel(theEvent);
+            List<EventTag> eventTags = context.EventTags
+                .Where(et => et.EventId == id)          // et means instance of the collections, in this example EventTags
+                .Include(et => et.Tag)
+                .ToList();
+
+            EventDetailViewModel viewModel = new EventDetailViewModel(theEvent, eventTags);
             return View(viewModel);
         }
 
