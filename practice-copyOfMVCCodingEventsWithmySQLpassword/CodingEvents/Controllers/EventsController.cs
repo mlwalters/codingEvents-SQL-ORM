@@ -123,7 +123,7 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
 
         [HttpPost]
         [Route("/Events/Edit")]
-        public IActionResult SubmitEditEventForm(int eventId, string name, string description, string location, int noOfAttendees, string contactEmail)
+        public IActionResult SubmitEditEventForm(int eventId, string name, string description, string location, int noOfAttendees, string contactEmail, EventCategory category)
         {
             // Event toBeEdited = EventData.GetById(eventId);
             Event toBeEdited = context.Events.Find(eventId);
@@ -132,6 +132,7 @@ namespace CodingEvents.Controllers                      // CONTINUATION OF CLASS
             toBeEdited.Location = location;
             toBeEdited.NoOfAttendees = noOfAttendees;
             toBeEdited.ContactEmail = contactEmail;
+            toBeEdited.Category = category;
 
             context.SaveChanges();
 
